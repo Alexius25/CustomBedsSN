@@ -4,6 +4,7 @@ using BepInEx;
 using BepInEx.Logging;
 using CustomBedsSN.Handler;
 using HarmonyLib;
+using Nautilus.Handlers;
 
 namespace CustomBedsSN;
 
@@ -12,6 +13,8 @@ namespace CustomBedsSN;
 public class Main : BaseUnityPlugin
 {
     public static string BedFolder => Path.Combine(Paths.PluginPath, "CustomBedsSN", "Beds");
+    
+    public new static ModConfig Config = OptionsPanelHandler.RegisterModOptions<ModConfig>();
     
     public new static ManualLogSource Logger { get; private set; }
 
@@ -25,6 +28,12 @@ public class Main : BaseUnityPlugin
         {
             Directory.CreateDirectory(BedFolder);
             Logger.LogInfo($"Created bed folder at {BedFolder}");
+        }
+        
+        if (!Config.EnableCustomBeds)
+        {
+            Logger.LogInfo("Custom Beds are disabled in the config.");
+            return;
         }
         
         CustomBedsHandler.RegisterCustomBedsFolder(BedFolder);

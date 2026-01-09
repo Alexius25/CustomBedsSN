@@ -31,6 +31,10 @@
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Reference Include="System.Windows.Forms" />
+    </ItemGroup>
+
     <!-- Clean destination folder before build -->
     <Target Name="CleanDestinationFolder" BeforeTargets="Build"
             Condition="'$(SubnauticaDir)' != ''">
