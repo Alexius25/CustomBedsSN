@@ -1,6 +1,8 @@
+using System;
 using CustomBedsSN.Dataclasses;
 using Newtonsoft.Json;
 using System.IO;
+using System.Linq;
 
 namespace CustomBedsSN.Handler;
 
@@ -19,7 +21,8 @@ public static class CustomBedsHandler
             return;
         }
         
-        var bedfiles = Directory.GetFiles(customBedsFolder, "*.bed", SearchOption.AllDirectories);
+        var allJsonFiles = Directory.GetFiles(customBedsFolder, "*.json", SearchOption.AllDirectories);
+        var bedfiles = allJsonFiles.Where(f => f.EndsWith(".bed.json", StringComparison.CurrentCultureIgnoreCase)).ToArray();
         Main.Logger.LogInfo($"Registered CustomBedsFolder: {customBedsFolder} with {bedfiles.Length} bed(s).");
         
         int index = 0;

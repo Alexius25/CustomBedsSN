@@ -64,7 +64,7 @@ CustomBeds/
 ```
 
 ### 4. Additional Notes
-- The `.bed` can be named anything, but it's recommended to match the `TechType` for clarity.
+- The `.bed.json` can be named anything, but it's recommended to match the `TechType` for clarity.
 - You can package multiple beds into a single folder with subfolders for each bed, each containing its own .bed file and textures.
 - Ensure that the texture files are correctly named and placed in the same folder as the .bed file for proper loading.
 - Test the custom bed in-game to verify that all textures and functionalities work as expected.
