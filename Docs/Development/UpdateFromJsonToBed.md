@@ -1,4 +1,4 @@
-# Update from .json to .bed
+# Update from .json to .bed.json Format
 
 This document provides a guide on how to update your custom bed definitions from the older `.json` format to the newer `.bed.json` format.
 
@@ -6,7 +6,7 @@ This document provides a guide on how to update your custom bed definitions from
 1. [Steps to Update from .json to .bed.json](#steps-to-update-from-json-to-bed)
 2. [Notes](#notes)
 
-### Steps to Update from .json to .bed
+### Steps to Update from .json to .bed.json
 
 1. Change the file extension from `.json` to `.bed.json`.
 2. Update the structure of the file to match the `.bed.json` format specifications. Below is an example of how to convert a simple bed definition.

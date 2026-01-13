@@ -1,4 +1,4 @@
-# Custom Bed Creation via JSON (.bed files)
+# Custom Bed Creation via JSON (.bed.json files)
 
 ## Overview
 1. [Json Structure](#1-json-structure)
@@ -58,7 +58,7 @@ Here's an example of a custom bed JSON configuration (Available at [NexusMods](h
 ```
 CustomBeds/
 └── KeepCalmKittyBed1/
-    ├── KeepCalmKittyBed1.bed
+    ├── KeepCalmKittyBed1.bed.json
     ├── KeepCalmKitty1.png
     └── KeepCalmKitty.png
 ```
@@ -66,6 +66,6 @@ CustomBeds/
 ### 4. Additional Notes
 - The `.bed.json` can be named anything, but it's recommended to match the `TechType` for clarity.
 - You can package multiple beds into a single folder with subfolders for each bed, each containing its own .bed file and textures.
-- Ensure that the texture files are correctly named and placed in the same folder as the .bed file for proper loading.
+- Ensure that the texture files are correctly named and placed in the same folder as the .bed.json file for proper loading.
 - Test the custom bed in-game to verify that all textures and functionalities work as expected.
 
