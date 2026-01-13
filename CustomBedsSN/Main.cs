@@ -3,7 +3,6 @@ using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using CustomBedsSN.Handler;
-using HarmonyLib;
 using Nautilus.Handlers;
 
 namespace CustomBedsSN;
@@ -37,8 +36,7 @@ public class Main : BaseUnityPlugin
         }
         
         CustomBedsHandler.RegisterCustomBedsFolder(BedFolder);
-        
-        Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
+
         Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
     }
 }
